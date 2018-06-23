@@ -8,6 +8,8 @@ import javax.persistence.EntityTransaction;
 import javax.persistence.Persistence;
 import javax.persistence.PersistenceContext;
 
+import org.springframework.transaction.annotation.Transactional;
+
 import com.crud.rest.beans.Vehicle;
 
 public class VehicleDaoImpl implements VehicleDao {
@@ -68,6 +70,7 @@ public class VehicleDaoImpl implements VehicleDao {
 	}
 
 	@SuppressWarnings("unchecked")
+	@Transactional
 	public void createDeleteQuery(String query) {
 		em.createQuery(query).executeUpdate();
 	}

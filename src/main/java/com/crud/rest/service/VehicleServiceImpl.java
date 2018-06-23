@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.crud.rest.beans.Vehicle;
 import com.crud.rest.dao.VehicleDao;
@@ -170,10 +171,11 @@ public class VehicleServiceImpl implements VehicleService {
 		}
 
 	@Override
+	@Transactional
 	public void deleteAllVehicles() {
 		try {
 			vehicleDao.startTransaction();
-			vehicleDao.createDeleteQuery("delete from Vehicle");
+			vehicleDao.createDeleteQuery("delete from com.crud.rest.beans.Vehicle");
 			vehicleDao.commitTransaction();
 		} catch (RuntimeException e) {
 			vehicleDao.rollbackTransaction();
