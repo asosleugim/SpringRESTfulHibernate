@@ -70,7 +70,7 @@ public class VehicleDaoImpl implements VehicleDao {
 	}
 
 	@SuppressWarnings("unchecked")
-	@Transactional
+	@Transactional //Test Transactional
 	public void createDeleteQuery(String query) {
 		em.createQuery(query).executeUpdate();
 	}
