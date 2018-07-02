@@ -12,4 +12,5 @@ Basic requirements:
 6) Create a new vehicle
 7) Return all vehicles
 8) Delete all vehicles
-9) Delete recent API - should delete last added vehicle 
+9) Delete recent API - should delete last added vehicle
+10) Delete vehicle by id
