@@ -1,4 +1,4 @@
-# SpringRESTExample
+# SpringRestHibernate Project
 Restful application using Spring, JPA: CRUD state operations to manipulate and mantain vehicles inventory
 
 RESTful CRUD application designed using Spring, Hibernate, JPA: to handle vehicles inventory & search. 
